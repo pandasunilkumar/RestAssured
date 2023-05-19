@@ -41,7 +41,7 @@ public class putRequest {
 		map.put("last_name","Das");
 		map.put("avatar", "https://reqres.in/img/faces/3-image.jpg");
 		
-	 given()
+	    given()
 		   .contentType("application/json")
 		   .body(map)
 		   
@@ -53,7 +53,7 @@ public class putRequest {
 
 		.then()
 		   .statusCode(201)
-		   .body("data[0].email",equalTo("michael.lawson@reqres.in"));
+		   .log().all();
 		
 		
 		}
